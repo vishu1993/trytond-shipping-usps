@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<form string="USPS Configuration">
+    <group string="Account Crendentials" id="credentials" colspan="4">
+        <label name="username"/>
+        <field name="username"/>
+        <label name="password"/>
+        <field name="password"/>
+        <label name="is_test"/>
+        <field name="is_test"/>
+    </group>
+</form>
