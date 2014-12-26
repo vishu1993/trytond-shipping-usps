@@ -80,9 +80,13 @@ major_version, minor_version, _ = info.get('version', '0.0.1').split('.', 2)
 major_version = int(major_version)
 minor_version = int(minor_version)
 
-requires = []
+requires = [
+    'requests',
+]
 
-MODULE2PREFIX = {}
+MODULE2PREFIX = {
+    'shipping': 'openlabs',
+}
 
 MODULE = "shipping_usps"
 PREFIX = "openlabs"
@@ -103,7 +107,7 @@ requires.append(
 setup(
     name='%s_%s' % (PREFIX, MODULE),
     version=info.get('version', '0.0.1'),
-    description="USPS shipping module",
+    description="Tryton USPS shipping module",
     author="Openlabs Technologies and Consulting (P) Ltd.",
     author_email='info@openlabs.co.in',
     url='http://www.openlabs.co.in/',
@@ -111,6 +115,7 @@ setup(
     packages=[
         'trytond.modules.%s' % MODULE,
         'trytond.modules.%s.tests' % MODULE,
+        'usps',
     ],
     package_data={
         'trytond.modules.%s' % MODULE: info.get('xml', [])
