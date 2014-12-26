@@ -1,0 +1,16 @@
+language: python
+python:
+  - 2.7
+script: make test-$TEST_CMD
+install: true  # override default install `pip install -r requirements.txt`
+env:
+  global:
+    - USPS_USERNAME="055LIENI0018"
+    - USPS_PASSWORD="XXXXXX"
+  matrix:
+    - TEST_CMD="sqlite"
+    - TEST_CMD="postgres"
+    - TEST_CMD="flake8"
+notifications:
+  email:
+  - ci-notify@openlabs.co.in

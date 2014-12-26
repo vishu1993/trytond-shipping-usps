@@ -1,0 +1,5 @@
+[run]
+source = trytond.modules.shipping_usps
+
+[report]
+omit = */tests/*, */setup.py
