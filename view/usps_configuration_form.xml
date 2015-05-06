@@ -4,7 +4,7 @@
         <label name="username"/>
         <field name="username"/>
         <label name="password"/>
-        <field name="password"/>
+        <field name="password" widget="password"/>
         <label name="is_test"/>
         <field name="is_test"/>
     </group>
